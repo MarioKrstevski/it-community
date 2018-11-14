@@ -4,7 +4,7 @@ export class Company {
         public websiteUrl: string,
         public description: string,
         public location: string,
-        public number: string,
+        public phoneNumber: string,
         public companySize: string,
         public numberOfEmployees: number,
         public photoUrl: string,
