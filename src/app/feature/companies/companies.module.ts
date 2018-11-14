@@ -11,7 +11,14 @@ import { MapComponent } from './components/map/map.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-    declarations: [FiltersComponent, CompaniesComponent, CompanyCardComponent, CompanyModalComponent, CompanyCompactComponent, PerksComponent, MapComponent, FooterComponent],
+    declarations: [
+        FiltersComponent,
+        CompaniesComponent,
+        CompanyCardComponent,
+        CompanyModalComponent,
+        CompanyCompactComponent,
+        PerksComponent, MapComponent,
+        FooterComponent],
     imports: [
         CompaniesRoutingModule,
         CommonModule
