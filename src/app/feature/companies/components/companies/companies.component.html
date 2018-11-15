@@ -1,5 +1,3 @@
 <div class="card-list">
-    <app-company-card></app-company-card>
-    <app-company-card></app-company-card>
-    <app-company-card></app-company-card>
+    <app-company-card *ngFor="let item of arrayGenerator(7)"></app-company-card>
 </div>
