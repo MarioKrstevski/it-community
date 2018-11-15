@@ -1,0 +1,30 @@
+.logo{
+    height: 45px;
+    display: inline-block;
+    width: 45px;
+    background: url('http://www.kokobread.com/uploads/7/8/1/0/78104406/screen-shot-2016-09-11-at-3-37-00-pm.png?235') no-repeat center;
+    background-size: cover;
+}
+.padding-top{
+    padding-top: 15px;
+}
+.max-width{
+    width:100%;
+}
+.inline{
+    display: inline-block;
+}
+.bg-image{
+    width: 100%;
+    height: 100%;
+}
+.example-compact{
+    margin: 5px 0;
+    border: 1px solid black;
+    padding: 0 !important;
+
+    .example-header-image {
+        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-size: cover;
+      }
+}

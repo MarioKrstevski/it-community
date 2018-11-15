@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
     styleUrls: ['./companies.component.scss']
 })
 export class CompaniesComponent implements OnInit {
-    public listView;
+    public listView = 'cards';
 
     constructor() { }
 
