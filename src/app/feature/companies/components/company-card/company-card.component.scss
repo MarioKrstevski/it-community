@@ -1,0 +1,19 @@
+.example-card {
+    display: inline-block;
+    max-width: 26vw;
+    min-width: 300px;
+    border: 1px solid black;
+    margin: 1%;
+    transition: 0.2s ease-out;
+
+    .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+}
+
+.example-card:hover{
+    // transform: scale(2);
+    transform: rotate(-1deg) scale(1.05);
+    transition: 0.3s ease-out;
+}
