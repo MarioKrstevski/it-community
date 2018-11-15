@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+    selector: 'app-filters',
+    templateUrl: './filters.component.html',
+    styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
 
-  constructor() { }
+    @Output() public presentationMode = new EventEmitter();
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+
+    }
+    setPMode(value: string) {
+        this.presentationMode.emit(value);
+        console.log(value);
+    }
 
 }

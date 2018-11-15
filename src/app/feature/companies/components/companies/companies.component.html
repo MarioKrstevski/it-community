@@ -1,3 +1,12 @@
+<app-filters (presentationMode)="listView = $event"></app-filters>
+Here: {{listView}}
 <div class="card-list">
-    <app-company-card *ngFor="let item of arrayGenerator(7)"></app-company-card>
+    <div *ngIf="listView === 'list'">
+        <app-company-card *ngFor="let item of arrayGenerator(7)"></app-company-card>
+    </div>
+
+    <div *ngIf="listView === 'cards'">
+        <div *ngFor="let item of arrayGenerator(7)" style="border: 1px solid black">Test Cards</div>
+    </div>
+
 </div>
