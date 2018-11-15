@@ -14,7 +14,7 @@ import { MainMenuComponent } from '../shared/components/main-menu/main-menu.comp
     imports: [
         CommonModule,
         HttpClientModule,
-        CompaniesModule
+        CompaniesModule,
     ]
 })
 export class CoreModule {

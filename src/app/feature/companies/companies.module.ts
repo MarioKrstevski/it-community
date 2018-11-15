@@ -9,6 +9,7 @@ import { CompanyCompactComponent } from './components/company-compact/company-co
 import { PerksComponent } from './components/perks/perks.component';
 import { MapComponent } from './components/map/map.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DemoMaterialModule } from '../material/material-module';
 
 @NgModule({
     declarations: [
@@ -17,11 +18,15 @@ import { FooterComponent } from './components/footer/footer.component';
         CompanyCardComponent,
         CompanyModalComponent,
         CompanyCompactComponent,
-        PerksComponent, MapComponent,
-        FooterComponent],
+        PerksComponent,
+        MapComponent,
+        FooterComponent,
+    ],
     imports: [
         CompaniesRoutingModule,
-        CommonModule
+        CommonModule,
+        DemoMaterialModule
+
     ]
 })
 export class CompaniesModule { }
