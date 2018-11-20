@@ -5,16 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompaniesModule } from '../feature/companies/companies.module';
 import { AboutComponent } from '../shared/components/about/about.component';
 import { MainMenuComponent } from '../shared/components/main-menu/main-menu.component';
+import { CoreRoutingModule } from './core-routing.module';
 
 @NgModule({
     declarations: [
         AboutComponent,
-        MainMenuComponent
     ],
     imports: [
+        CompaniesModule,
+        CoreRoutingModule,
         CommonModule,
         HttpClientModule,
-        CompaniesModule,
     ]
 })
 export class CoreModule {
