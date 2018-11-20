@@ -1,5 +1,52 @@
 <div class="smart-filter">
 
+    <div class="intention">
+        <mat-radio-group [(ngModel)]="intention">
+            <mat-radio-button [checked]="true" value="everything">Just Looking</mat-radio-button>
+            <mat-radio-button value="jobs">Interested in Jobs</mat-radio-button>
+            <mat-radio-button value="internships">Interested in Internships</mat-radio-button>
+        </mat-radio-group>
 
+        {{intention}}
+    </div>
+
+    <div class="technologies">
+        <div>
+            <mat-checkbox class="example-margin" [(ngModel)]="any">Any</mat-checkbox> <br>
+
+        </div>
+
+        <div>
+
+            <mat-checkbox class="example-margin" [(ngModel)]="fe" [disabled]="any">Front End</mat-checkbox>
+            <div *ngIf="fe">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Select Tech
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <mat-chip-list>
+                            <mat-chip>Angular</mat-chip>
+                            <mat-chip>React</mat-chip>
+                            <mat-chip color="primary" selected>Vue</mat-chip>
+                            <mat-chip color="accent" selected>jQuery</mat-chip>
+                        </mat-chip-list>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+                {{any}}
+            </div>
+        </div>
+        <mat-checkbox class="example-margin" [(ngModel)]="be" [disabled]="any">Back End</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="testing" [disabled]="any">Testing</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="mobile" [disabled]="any">Mobile</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="fs" [disabled]="any">Full Stack</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="do" [disabled]="any">Dev Ops</mat-checkbox>
+    </div>
+
+    <button class="apply" (click)="applyFilter()"> Apply filter </button>
 
 </div>

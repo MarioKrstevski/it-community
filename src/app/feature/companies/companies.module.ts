@@ -11,6 +11,8 @@ import { MapComponent } from './components/map/map.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DemoMaterialModule } from '../material/material-module';
 import { ViewOptionsComponent } from './components/view-options/view-options.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -26,9 +28,9 @@ import { ViewOptionsComponent } from './components/view-options/view-options.com
     ],
     imports: [
         CompaniesRoutingModule,
+        FormsModule,
         CommonModule,
         DemoMaterialModule
-
     ]
 })
 export class CompaniesModule { }
