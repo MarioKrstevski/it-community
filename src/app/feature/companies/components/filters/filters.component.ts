@@ -7,16 +7,12 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
 
-    @Output() public presentationMode = new EventEmitter();
 
     constructor() { }
 
     ngOnInit() {
 
     }
-    setPMode(value: string) {
-        this.presentationMode.emit(value);
-        console.log(value);
-    }
+
 
 }

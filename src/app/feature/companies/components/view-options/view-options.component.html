@@ -1,0 +1,18 @@
+<mat-button-toggle-group class="view-options" (click)="setPMode(group.value)" #group="matButtonToggleGroup" value="cards">
+    <mat-button-toggle value="list">
+        <mat-icon>
+            <i class="material-icons">
+                storage
+            </i>
+        </mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="cards">
+        <mat-icon>
+            <i class="material-icons">
+                widgets
+            </i>
+        </mat-icon>
+    </mat-button-toggle>
+</mat-button-toggle-group>
+
+<div class="example-selected-value">Selected value: {{group.value}}</div>

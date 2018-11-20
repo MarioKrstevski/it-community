@@ -10,6 +10,7 @@ import { PerksComponent } from './components/perks/perks.component';
 import { MapComponent } from './components/map/map.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DemoMaterialModule } from '../material/material-module';
+import { ViewOptionsComponent } from './components/view-options/view-options.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { DemoMaterialModule } from '../material/material-module';
         PerksComponent,
         MapComponent,
         FooterComponent,
+        ViewOptionsComponent,
     ],
     imports: [
         CompaniesRoutingModule,

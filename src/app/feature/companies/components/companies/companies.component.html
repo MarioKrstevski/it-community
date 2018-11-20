@@ -1,8 +1,8 @@
-<div>
-
-    <app-filters (presentationMode)="listView = $event"></app-filters>
+<div class="filter">
+    <app-filters></app-filters>
 </div>
 
+<app-view-options (presentationMode)="listView = $event"></app-view-options>
 Here: {{listView}}
 <div class="card-list">
     <div *ngIf="listView === 'cards'">
