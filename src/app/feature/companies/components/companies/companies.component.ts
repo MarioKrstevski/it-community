@@ -7,6 +7,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class CompaniesComponent implements OnInit {
     public listView = 'cards';
+    public filter = false;
 
     constructor() { }
 

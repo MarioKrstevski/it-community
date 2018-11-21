@@ -1,5 +1,7 @@
 <div class="filter">
-    <app-filters></app-filters>
+
+    <button class="filter-button" (click)="filter =!filter" *ngIf="!filter"> Show Filter Options </button>
+    <app-filters *ngIf="filter"></app-filters>
 </div>
 
 <app-view-options (presentationMode)="listView = $event"></app-view-options>

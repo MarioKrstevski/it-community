@@ -1,5 +1,10 @@
 .filter{
     padding: 85px;
+   .filter-button{
+       position: relative;
+       left:50%;
+       transform: translateX(-50%);
+   }
 }
 .card-list{
     text-align: center;
