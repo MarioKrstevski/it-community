@@ -1,11 +1,12 @@
 .smart-filter{
     width: 700px;
-    height: 250px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
     border: 1px solid black;
+
+
     // .view-options{
     //     position: absolute;
     //     bottom: 0;
@@ -36,35 +37,91 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.techy{
+
+}
+.technologies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.optional-tech{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .tech{
-    width:13%;
+    width: 48%;
     margin: auto 3px ;
-    height: 200px;
+    height: 100px;
     border: 1px solid pink;
     display: inline-block;
-    overflow: visible;
+    overflow: hidden;
+    position: static;
+
+
+    mat-checkbox{
+        height: 30px;
+        border: 1px solid purple;
+        display: block;
+        // float: left;
+    }
+
+    .specific-tech{
+        position: static;
+        margin: 0;
+        width: 90%;
+        border:1px solid yellow;
+        display: block;
+
+        mat-chip-list mat-chip{
+            margin: 1px;
+            padding: 2px;
+            border: 1px solid green;
+        }
+
+        /deep/ .mat-expansion-panel-body{
+            padding: 5px;
+            position: absolute;
+            left:-40px;
+            width:150px;
+            height: 100%;
+            border:1px solid grey;
+        }
+    }
+}
+.distance{
+    h2{
+        text-align: center;
+    }
+    .mat-slider-horizontal {
+        width: 200px;
+        left:50%;
+        transform: translateX(-50%);
+      }
+}
+
+.specific-city {
     position: relative;
-}
-.specific-tech{
-    position: absolute;
-    margin: 0;
-    width:90%;
-    border:1px solid yellow;
-    display: block;
-
-    mat-chip-list mat-chip{
-        margin: 1px;
-        padding: 2px;
-        border: 1px solid green;
-    }
-
-    /deep/ .mat-expansion-panel-body{
-        padding: 5px;
-        position: absolute;
-        left:-40px;
-        width:150px;
-        height: 100%;
-        border:1px solid grey;
+    left:50%;
+    transform: translateX(-20%);
+    span{
+        margin: 5px;
+        margin-right: 10px;
     }
 }
+
+.company-size{
+    margin-bottom: 30px;
+    position: relative;
+    left:50%;
+    transform: translateX(-25%);
+    span{
+        margin: 5px;
+        margin-right: 10px;
+    }
+}
+

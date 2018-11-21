@@ -10,158 +10,154 @@
         {{intention}}
     </div>
 
-    <div class="technologies">
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="any">Any</mat-checkbox> <br>
-        </div>
-
-        <div class="tech">
-
-            <mat-checkbox class="example-margin" [(ngModel)]="fe" [disabled]="any">Front End</mat-checkbox>
-            <div class="specific-tech" *ngIf="fe">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-
-                        <mat-chip-list>
-                            <mat-chip>Angular</mat-chip>
-                            <mat-chip>React</mat-chip>
-                            <mat-chip color="primary" selected>Vue</mat-chip>
-                            <mat-chip color="accent" selected>jQuery</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
-
-                {{fe}}
+    <div class="main-tech techy">
+        <div class="technologies">
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="any">Any</mat-checkbox> <br>
             </div>
-        </div>
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="be" [disabled]="any">Back End</mat-checkbox>
-            <div class="specific-tech" *ngIf="be">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
 
-                        <mat-chip-list>
-                            <mat-chip>Ruby</mat-chip>
-                            <mat-chip>Java</mat-chip>
-                            <mat-chip color="primary" selected>Python</mat-chip>
-                            <mat-chip color="accent" selected>C#</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
+            <div class="tech">
 
-                {{be}}
+                <mat-checkbox class="example-margin" [(ngModel)]="fe" [disabled]="any">Front End</mat-checkbox>
+                <div class="specific-tech" *ngIf="fe">
+                    <mat-chip-list>
+                        <mat-chip>Angular</mat-chip>
+                        <mat-chip>React</mat-chip>
+                        <mat-chip color="primary" selected>Vue</mat-chip>
+                        <mat-chip color="accent" selected>jQuery</mat-chip>
+                    </mat-chip-list>
+
+                    {{fe}}
+                </div>
             </div>
-        </div>
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="be" [disabled]="any">Back End</mat-checkbox>
+                <div class="specific-tech" *ngIf="be">
+                    <mat-chip-list>
+                        <mat-chip>Ruby</mat-chip>
+                        <mat-chip>Java</mat-chip>
+                        <mat-chip color="primary" selected>Python</mat-chip>
+                        <mat-chip color="accent" selected>C#</mat-chip>
+                    </mat-chip-list>
 
-
-
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="testing" [disabled]="any">Testing</mat-checkbox>
-            <div class="specific-tech" *ngIf="testing">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-
-                        <mat-chip-list>
-                            <mat-chip>Automated</mat-chip>
-                            <mat-chip>Manual</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
-
-                {{testing}}
+                    {{be}}
+                </div>
             </div>
+
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="mobile" [disabled]="any">Mobile</mat-checkbox>
+                <div class="specific-tech" *ngIf="mobile">
+                    <mat-chip-list>
+                        <mat-chip>iOS</mat-chip>
+                        <mat-chip>Android</mat-chip>
+                        <mat-chip color="primary" selected>React Native</mat-chip>
+                        <mat-chip color="accent" selected>Native Script</mat-chip>
+                    </mat-chip-list>
+
+                    {{mobile}}
+                </div>
+            </div>
+
         </div>
 
+        <div class="optional-tech techy" *ngIf="more">
+
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="testing" [disabled]="any">Testing</mat-checkbox>
+                <div class="specific-tech" *ngIf="testing">
+                    <mat-chip-list>
+                        <mat-chip>Automated</mat-chip>
+                        <mat-chip>Manual</mat-chip>
+                    </mat-chip-list>
+                    {{testing}}
+                </div>
+            </div>
 
 
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="mobile" [disabled]="any">Mobile</mat-checkbox>
-            <div class="specific-tech" *ngIf="mobile">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="fs" [disabled]="any">Full Stack</mat-checkbox>
+                <div class="specific-tech" *ngIf="fs">
+                    <mat-chip-list>
+                        <mat-chip>MERN</mat-chip>
+                        <mat-chip>MEAN</mat-chip>
+                        <mat-chip color="primary" selected>LAMP</mat-chip>
+                        <mat-chip color="accent" selected>Java + Spring</mat-chip>
+                    </mat-chip-list>
 
-                        <mat-chip-list>
-                            <mat-chip>iOS</mat-chip>
-                            <mat-chip>Android</mat-chip>
-                            <mat-chip color="primary" selected>React Native</mat-chip>
-                            <mat-chip color="accent" selected>Native Script</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
+                    {{fs}}
+                </div>
+            </div>
 
-                {{mobile}}
+
+            <div class="tech">
+                <mat-checkbox class="example-margin" [(ngModel)]="do" [disabled]="any">Dev Ops</mat-checkbox>
+                <div class="specific-tech" *ngIf="do">
+                    <mat-chip-list>
+                        <mat-chip>Jenkins</mat-chip>
+                        <mat-chip>Solar Wind</mat-chip>
+                        <mat-chip color="primary" selected>Docker</mat-chip>
+                    </mat-chip-list>
+                    {{do}}
+                </div>
             </div>
         </div>
 
+    </div>
 
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="fs" [disabled]="any">Full Stack</mat-checkbox>
-            <div class="specific-tech" *ngIf="fs">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
+    <button (click)="more = !more" class="more" *ngIf="!any && !more">
+        Down
+    </button>
 
-                        <mat-chip-list>
-                            <mat-chip>MERN</mat-chip>
-                            <mat-chip>MEAN</mat-chip>
-                            <mat-chip color="primary" selected>LAMP</mat-chip>
-                            <mat-chip color="accent" selected>Java + Spring</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
+    <button (click)="more = !more" class="less" *ngIf="more">
+        UP
+    </button>
 
-                {{fs}}
-            </div>
+    <button (click)="evenMore = !evenMore" class="more" *ngIf="!evenMore">
+        More
+    </button>
+
+    <button (click)="evenMore = !evenMore" class="less" *ngIf="evenMore">
+        Less
+    </button>
+
+    <div class="additional-options" *ngIf="evenMore">
+        <div class="distance">
+            <h2>Distance from you (km)</h2>
+
+            <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step"
+                [thumbLabel]="thumbLabel" [tickInterval]="tickInterval" [(ngModel)]="value" [vertical]="vertical">
+            </mat-slider>
         </div>
 
-
-        <div class="tech">
-            <mat-checkbox class="example-margin" [(ngModel)]="do" [disabled]="any">Dev Ops</mat-checkbox>
-            <div class="specific-tech" *ngIf="do">
-                <mat-accordion>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Select Tech
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-
-                        <mat-chip-list>
-                            <mat-chip>Jenkins</mat-chip>
-                            <mat-chip>Solar Wind</mat-chip>
-                            <mat-chip color="primary" selected>Docker</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </mat-accordion>
-
-                {{do}}
-            </div>
+        <div class="specific-city">
+            <span>Specific City:</span>
+            <mat-form-field>
+                <mat-select placeholder="City">
+                    <mat-option *ngFor="let city of cities" [value]="city.value">
+                        {{city.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
 
+        <div class="company-size">
+
+            <span>Company Size: </span>
+            <mat-button-toggle-group class="view-options" #group="matButtonToggleGroup" value="cards">
+                <mat-button-toggle value="small">
+                    Small
+                </mat-button-toggle>
+                <mat-button-toggle value="medium">
+                    Medium
+                </mat-button-toggle>
+                <mat-button-toggle value="big">
+                    Big
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+
+            {{group.value}}
+
+        </div>
     </div>
 
     <button class="apply" (click)="applyFilter()"> Apply filter </button>

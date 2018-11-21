@@ -8,6 +8,30 @@ import { log } from 'util';
 })
 export class FiltersComponent implements OnInit {
 
+    public more = false;
+    public evenMore = false;
+
+    public cities = [
+        { value: 'Kumanovo', viewValue: "Kumanovo" },
+        { value: 'Skopje', viewValue: "Skopje" },
+        { value: 'Bitola', viewValue: "Bitola" },
+        { value: 'Tetovo', viewValue: "Tetovo" },
+        { value: 'Ohrid', viewValue: "Ohrid" }
+    ];
+
+    public disabled = false;
+    public max = 10;
+    public min = 0;
+    public value = 6;
+    public step = 2;
+    public tickInterval = 1;
+    public vertical = false;
+    public showTicks = true;
+    public thumbLabel = true;
+    public autoTicks = false;
+    public invert = false;
+
+
     public intention;
     public any = false;
     public fe = false;
