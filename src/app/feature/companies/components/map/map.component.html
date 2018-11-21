@@ -1,3 +1,25 @@
-<p>
-  map works!
-</p>
+<agm-map [latitude]="41.994172" [longitude]="21.431583" [zoom]="14">
+    <agm-marker-cluster [zoomOnClick]="true" imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
+        <!-- Overlay acts as a marker -->
+        <agm-marker [iconUrl]="{
+        url: 'https://www.xing.com/img/custom/cp/assets/logo/2/8/b/348811/square_128px/logo-nca-white-300dpi-285x70px.jpg',
+        scaledSize: {
+            width: 60,
+            height: 60
+            }
+        }"
+            [latitude]="42.003691" [longitude]="21.394897">>
+
+        </agm-marker>
+        <agm-marker [iconUrl]="{
+        url: 'https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1397189464/6e01bbaf3f4e2ea4dbc2f87ee4b4703a.png',
+        scaledSize: {
+            width: 60,
+            height: 60
+            }
+        }"
+            [latitude]="41.981962" [longitude]="21.453431">>
+
+        </agm-marker>
+    </agm-marker-cluster>
+</agm-map>
