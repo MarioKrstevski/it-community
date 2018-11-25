@@ -10,6 +10,11 @@ import { PerksComponent } from './components/perks/perks.component';
 import { MapComponent } from './components/map/map.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DemoMaterialModule } from '../material/material-module';
+import { GoogleMapComponent } from './components/google-map/google-map.component';
+import { AgmOverlays } from "agm-overlays";
+import { AgmCoreModule } from '@agm/core';
+import { MyMarkerComponent } from './components/my-marker/my-marker.component';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 @NgModule({
     declarations: [
@@ -21,12 +26,18 @@ import { DemoMaterialModule } from '../material/material-module';
         PerksComponent,
         MapComponent,
         FooterComponent,
+        GoogleMapComponent,
+        MyMarkerComponent,
     ],
     imports: [
         CompaniesRoutingModule,
         CommonModule,
-        DemoMaterialModule
-
+        DemoMaterialModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyC-UOu23S6rRvG4vbsbT9ps0U5tHsSgccA'
+        }),
+        AgmOverlays,
+        AgmJsMarkerClustererModule,
     ]
 })
 export class CompaniesModule { }
